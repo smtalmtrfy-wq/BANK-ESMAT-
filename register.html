@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بنك عصمت الحميدي - إنشاء حساب</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark">
+  <!-- شريط التنبيهات -->
+  <div class="alert-bar">
+    <div class="alert-content">
+      <i class="fas fa-shield-alt"></i>
+      <span>بنك عصمت الحميدي - آمن، سريع، موثوق</span>
+    </div>
+  </div>
+
+  <!-- شريط التنقل -->
+  <nav class="navbar navbar-dark navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-university"></i>
+        <span>بنك عصمت الحميدي</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">تسجيل الدخول</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="register.html">إنشاء حساب</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">الخدمات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">عن البنك</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">اتصل بنا</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- المحتوى الرئيسي -->
+  <div class="container main-container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card login-card">
+          <div class="card-header text-center">
+            <h3 class="text-warning mb-0"><i class="fas fa-user-plus"></i> إنشاء حساب جديد</h3>
+          </div>
+          <div class="card-body">
+            <div class="text-center mb-4">
+              <div class="avatar">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <p class="text-muted">املأ النموذج أدناه لإنشاء حساب جديد في بنك عصمت الحميدي</p>
+            </div>
+            
+            <form id="registerForm">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="fullName" class="form-label">الاسم الكامل</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" id="fullName" class="form-control" placeholder="أدخل اسمك الكامل" required>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">البريد الإلكتروني</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="email" id="email" class="form-control" placeholder="example@domain.com" required>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="phone" class="form-label">رقم الهاتف</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    <input type="tel" id="phone" class="form-control" placeholder="05XXXXXXXX" required>
+                  </div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <label for="nationalId" class="form-label">رقم الهوية الوطنية</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                    <input type="text" id="nationalId" class="form-control" placeholder="10 أرقام" required>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="username" class="form-label">اسم المستخدم</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                    <input type="text" id="username" class="form-control" placeholder="أدخل اسم المستخدم" required>
+                  </div>
+                  <div class="form-text">يجب أن يكون اسم المستخدم فريدًا</div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <label for="dob" class="form-label">تاريخ الميلاد</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                    <input type="date" id="dob" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="password" class="form-label">كلمة المرور</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" id="password" class="form-control" placeholder="كلمة المرور" required>
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword1">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                  <div class="form-text">يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل</div>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                  <label for="confirmPassword" class="form-label">تأكيد كلمة المرور</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="تأكيد كلمة المرور" required>
+                    <button class="btn btn-outline-secondary" type="button" id="togglePassword2">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="accountType" class="form-label">نوع الحساب</label>
+                <select id="accountType" class="form-select" required>
+                  <option value="" selected disabled>اختر نوع الحساب</option>
+                  <option value="current">حساب جاري</option>
+                  <option value="saving">حساب توفير</option>
+                  <option value="investment">حساب استثماري</option>
+                </select>
+              </div>
+              
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">
+                  أوافق على <a href="#" class="text-warning">الشروط والأحكام</a> وسياسة الخصوصية
+                </label>
+              </div>
+              
+              <div class="text-center">
+                <button type="submit" class="btn btn-warning w-100 py-2">
+                  <i class="fas fa-user-plus"></i> إنشاء الحساب
+                </button>
+              </div>
+              
+              <div class="text-center mt-3">
+                <p id="registerMsg" class="text-danger"></p>
+              </div>
+              
+              <hr class="my-4">
+              
+              <div class="text-center">
+                <p class="mb-2">هل لديك حساب بالفعل؟</p>
+                <a href="index.html" class="btn btn-outline-warning">
+                  <i class="fas fa-sign-in-alt"></i> تسجيل الدخول
+                </a>
+              </div>
+            </form>
+          </div>
+          
+          <div class="card-footer text-center">
+            <small class="text-muted">
+              <i class="fas fa-info-circle"></i> سيتم مراجعة طلبك والاتصال بك خلال 24 ساعة
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- الفوتر -->
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="text-warning">بنك عصمت الحميدي</h5>
+          <p>نقدم خدمات مصرفية شاملة لعملائنا مع الحفاظ على أعلى معايير الأمان والجودة.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5 class="text-warning">روابط سريعة</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">تسجيل الدخول</a></li>
+            <li><a href="register.html">إنشاء حساب</a></li>
+            <li><a href="#services">الخدمات</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+          </ul>
+        </div>
+        
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // كود خاص بصفحة التسجيل
+    document.addEventListener('DOMContentLoaded', function() {
+      // إظهار/إخفاء كلمة المرور
+      document.getElementById('togglePassword1').addEventListener('click', function() {
+        const passwordInput = document.getElementById('password');
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          this.innerHTML = '<i class="fas fa-eye-slash"></i>';
+        } else {
+          passwordInput.type = 'password';
+          this.innerHTML = '<i class="fas fa-eye"></i>';
+        }
+      });
+      
+      document.getElementById('togglePassword2').addEventListener('click', function() {
+        const passwordInput = document.getElementById('confirmPassword');
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          this.innerHTML = '<i class="fas fa-eye-slash"></i>';
+        } else {
+          passwordInput.type = 'password';
+          this.innerHTML = '<i class="fas fa-eye"></i>';
+        }
+      });
+      
+      // معالجة نموذج التسجيل
+      document.getElementById('registerForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const confirmPassword = document.getElementById('confirmPassword').value.trim();
+        const msgElement = document.getElementById('registerMsg');
+        
+        // التحقق من كلمات المرور
+        if (password !== confirmPassword) {
+          msgElement.textContent = "كلمات المرور غير متطابقة";
+          return;
+        }
+        
+        if (password.length < 8) {
+          msgElement.textContent = "كلمة المرور يجب أن تحتوي على 8 أحرف على الأقل";
+          return;
+        }
+        
+        // التحقق من اسم المستخدم المكرر
+        let users = JSON.parse(localStorage.getItem('bankUsers')) || [];
+        const userExists = users.find(u => u.username === username);
+        
+        if (userExists) {
+          msgElement.textContent = "اسم المستخدم موجود بالفعل، الرجاء اختيار اسم آخر";
+          return;
+        }
+        
+        // إنشاء حساب جديد
+        const newUser = {
+          username: username,
+          password: password,
+          name: document.getElementById('fullName').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          phone: document.getElementById('phone').value.trim(),
+          nationalId: document.getElementById('nationalId').value.trim(),
+          dob: document.getElementById('dob').value,
+          accountType: document.getElementById('accountType').value,
+          balance: 0,
+          joinedDate: new Date().toLocaleDateString('ar-SA')
+        };
+        
+        users.push(newUser);
+        localStorage.setItem('bankUsers', JSON.stringify(users));
+        
+        // عرض رسالة النجاح
+        msgElement.textContent = "تم إنشاء الحساب بنجاح! جاري التوجيه إلى صفحة تسجيل الدخول...";
+        msgElement.className = "text-success fw-bold";
+        
+        // الانتقال إلى صفحة تسجيل الدخول بعد تأخير
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 2000);
+      });
+      
+      // تعيين تاريخ اليوم كحد أقصى لتاريخ الميلاد
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('dob').max = today;
+    });
+  </script>
+</body>
+</html>
